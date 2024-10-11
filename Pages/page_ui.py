@@ -42,5 +42,5 @@ class BasePage:
     def support_service(self):
         self.driver.find_element(By.XPATH, "//button[@class='styles_contentButton__Yfvdh']").click()
 
-        """ Использовать при первом запуске теста """
+        # """ Использовать при первом запуске теста """
         # # self.driver.find_element(By.CSS_SELECTOR, 'button[data-test-tag="confirm-dialog-ok"]').click()

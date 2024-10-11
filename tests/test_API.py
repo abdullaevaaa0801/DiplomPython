@@ -1,6 +1,5 @@
 from Pages.page_api import ApiKinopoisk
 
-
 api_kinopoisk = ApiKinopoisk()
 
 

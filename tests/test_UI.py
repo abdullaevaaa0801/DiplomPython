@@ -36,7 +36,7 @@ def test_top_250(chrome_browser):
 
 @allure.id("Тест-3")
 @allure.severity ("Critical")
-@allure.title("Покупка билетов в кино")
+@allure.title("Покупка билетов в кино на выбранную дату")
 @allure.description("Переход на страницу для покупки билетов в кино")
 def test_buy_ticket(chrome_browser):
     with allure.step("Открытие главной страницы"):
@@ -44,7 +44,7 @@ def test_buy_ticket(chrome_browser):
         page = BasePage(chrome_browser)
     with allure.step("Проскролить страницу до нужного элемента"):
         page.scroll()
-    with allure.step("Переход на страницу для покупки билетов в кино"):
+    with allure.step("Переход на страницу для покупки билетов в кино на выбранную дату"):
         page.buy_ticket()
 
 @allure.id("Тест-4")
