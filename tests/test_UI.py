@@ -1,3 +1,5 @@
+from time import sleep
+
 import allure
 import pytest
 from selenium import webdriver
@@ -36,7 +38,7 @@ def test_top_250(chrome_browser):
 
 @allure.id("Тест-3")
 @allure.severity ("Critical")
-@allure.title("Покупка билетов в кино")
+@allure.title("Покупка билетов в кино на выбранную дату")
 @allure.description("Переход на страницу для покупки билетов в кино")
 def test_buy_ticket(chrome_browser):
     with allure.step("Открытие главной страницы"):
@@ -44,8 +46,9 @@ def test_buy_ticket(chrome_browser):
         page = BasePage(chrome_browser)
     with allure.step("Проскролить страницу до нужного элемента"):
         page.scroll()
-    with allure.step("Переход на страницу для покупки билетов в кино"):
+    with allure.step("Переход на страницу для покупки билетов в кино на выбранную дату"):
         page.buy_ticket()
+
 
 @allure.id("Тест-4")
 @allure.severity ("Critical")
@@ -57,6 +60,7 @@ def test_series(chrome_browser):
         page = BasePage(chrome_browser)
     with allure.step("Переход на страницу с сериалами"):
         page.series()
+        
 
 @allure.id("Тест-5")
 @allure.severity ("Blocker")
@@ -70,4 +74,5 @@ def test_support_service(chrome_browser):
         page.scroll()
     with allure.step("Нажатие на кнопку 'Служба поддержки'"):
         page.support_service()
+
 

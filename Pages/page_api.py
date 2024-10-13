@@ -5,7 +5,7 @@ from tests.conftest import token
 
 class ApiKinopoisk:
     """
-    Базовый класс для АПИ кинопоиск
+    Базовый класс для АПИ Кинопоиск
     """
 
     def __init__(self):
